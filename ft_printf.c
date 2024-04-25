@@ -6,11 +6,10 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:10:23 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/24 17:11:20 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/04/25 17:40:21 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdarg.h>
 
 int ft_printf(const char *format, ...)
@@ -24,24 +23,9 @@ int ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (*format != '\0')
 	{
-		if (*(++format) == '%')
+		if (*(format++) == '%')
 		{
-			if (*format == 'c')
-				len += print_char(va_arg(ap, char), 1);
-			else if (*format == 's')
-				len += print_string(va_arg(ap, char *));
-			else if (*format == 'p')
-				len += print_string(va_arg(ap, char *));
-			else if (*format == 'd' || *format == 'i')
-				len += print_digit(va_arg(ap, int));
-			else if (*format == 'u')
-				len += print_digit(va_arg(ap, int));
-			else if (*format == 'x')
-				len += print_hexa(va_arg(ap, int), 'x');
-			else if (*format == 'X')
-				len += print_hexa(va_arg(ap, int), 'X');
-			else if (*format == '%')
-				len += print_char(va_arg(ap, char));
+			len += format_type(*format, ap)
 			format++;
 		}
 		else

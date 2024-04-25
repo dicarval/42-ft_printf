@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 17:00:15 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/25 18:42:48 by dicarval         ###   ########.fr       */
+/*   Created: 2024/04/25 12:27:59 by dicarval          #+#    #+#             */
+/*   Updated: 2024/04/25 19:21:59 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
-int	print_char(int c)
+int	print_str(char *str)
 {
-	return (write(1, &c, 1));
+	int len,
+
+	len = 0;
+	while (*str != '\0')
+	{
+		len += print_char((int)*str);
+		str++;
+	}
+	return len;
 }
