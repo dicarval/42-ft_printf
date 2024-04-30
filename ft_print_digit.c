@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_digit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 17:00:15 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/26 10:26:39 by dicarval         ###   ########.fr       */
+/*   Created: 2024/04/26 09:04:43 by dicarval          #+#    #+#             */
+/*   Updated: 2024/04/29 16:40:56 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(int c)
+int	ft_print_digit(long int dgt)
 {
-	return (write(1, &c, 1));
+	int			len;
+
+	len = 0;
+	if (dgt < 0)
+	{
+		len += ft_print_char('-');
+		dgt = -dgt;
+	}
+	if (dgt > 9)
+	{
+		len += ft_print_digit(dgt / 10);
+		len += ft_print_digit(dgt % 10);
+	}
+	else
+		len += ft_print_char(dgt + 48);
+	return (len);
 }

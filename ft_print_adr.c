@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_adr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 17:00:15 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/26 10:26:39 by dicarval         ###   ########.fr       */
+/*   Created: 2024/04/29 15:14:16 by dicarval          #+#    #+#             */
+/*   Updated: 2024/04/30 12:03:11 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(int c)
+int	ft_print_adr(void *adr)
 {
-	return (write(1, &c, 1));
+	if(!adr)
+		return (ft_print_str("0x0"));
+	else
+	return ((ft_print_str("0x") + ft_print_hexa((unsigned long)adr,'X')));
 }
