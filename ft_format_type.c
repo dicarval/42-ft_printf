@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 17:18:23 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/29 15:46:37 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:48:41 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	ft_format_type(char type, va_list ap)
 	else if (type == 'u')
 		len += ft_print_digit((long)(va_arg(ap, unsigned int)));
 	else if (type == 'x')
-		len += ft_print_hexa((long)va_arg(ap, unsigned int), 'x');
+		len += ft_print_hexa((long long)va_arg(ap, unsigned int), 'x');
 	else if (type == 'X')
-		len += ft_print_hexa((long)va_arg(ap, unsigned int), 'X');
+		len += ft_print_hexa((long long)va_arg(ap, unsigned int), 'X');
 	else if (type == '%')
-		len += ft_print_char(va_arg(ap, int));
+		len += ft_print_char(type);
 	return (len);
 }

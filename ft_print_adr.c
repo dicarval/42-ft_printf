@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:14:16 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/30 12:03:11 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:43:02 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_print_adr(void *adr)
 	if(!adr)
 		return (ft_print_str("0x0"));
 	else
-	return ((ft_print_str("0x") + ft_print_hexa((unsigned long)adr,'X')));
+	return ((ft_print_str("0x") + ft_print_hexa((unsigned long long)adr,'x')));
 }

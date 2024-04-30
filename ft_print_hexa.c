@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:44:52 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/29 16:44:41 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:47:52 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_print_hexalower(long int nbr, int base)
 
 }
 
-int	ft_print_hexa(long int nbr, char type_hexa)
+int	ft_print_hexa(unsigned long long int nbr, char type_hexa)
 {
 	int		len;
 	int		base;
