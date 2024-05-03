@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:53:51 by dicarval          #+#    #+#             */
-/*   Updated: 2024/05/01 14:04:06 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/03 10:46:17 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	ft_print_digit(long int dgt);
 int	ft_print_str(char *str);
 int	ft_format_type(char type, va_list ap);
 int	ft_print_hexa(unsigned long int nbr, char type_hexa);
-int	ft_print_adr(unsigned long int nbr);
+int	ft_print_adr( void *ptr);
 
 #endif
