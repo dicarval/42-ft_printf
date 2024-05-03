@@ -6,13 +6,12 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:53:51 by dicarval          #+#    #+#             */
-/*   Updated: 2024/05/03 10:46:17 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:14:45 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-//size_t, malloc, write
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>

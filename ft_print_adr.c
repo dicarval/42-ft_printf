@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:14:16 by dicarval          #+#    #+#             */
-/*   Updated: 2024/05/03 10:53:44 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:52:37 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_print_adr(void *ptr)
 {
 	int	len;
-
 
 	len = 0;
 	if (ptr == 0)
