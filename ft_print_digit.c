@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 09:04:43 by dicarval          #+#    #+#             */
-/*   Updated: 2024/04/29 16:40:56 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/06 14:14:00 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_digit(long int dgt)
 {
-	int			len;
+	int	len;
 
 	len = 0;
 	if (dgt < 0)

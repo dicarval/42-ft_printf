@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:10:23 by dicarval          #+#    #+#             */
-/*   Updated: 2024/05/03 14:31:46 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/06 14:40:09 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_printf(const char *format, ...)
 		{
 			format++;
 			len += ft_format_type(*format, ap);
-			format++;
 		}
 		else
 			len += ft_print_char(*format);
