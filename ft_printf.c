@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:10:23 by dicarval          #+#    #+#             */
-/*   Updated: 2024/05/06 14:40:09 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:15:25 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_printf(const char *format, ...)
 
 	len = 0;
 	if (!format)
-		return (0);
+		return (-1);
 	va_start(ap, format);
 	while (*format != '\0')
 	{
