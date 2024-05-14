@@ -6,7 +6,7 @@
 /*   By: dicarval <dicarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 17:18:23 by dicarval          #+#    #+#             */
-/*   Updated: 2024/05/06 11:34:39 by dicarval         ###   ########.fr       */
+/*   Updated: 2024/05/14 10:15:25 by dicarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,5 @@ int	ft_format_type(char type, va_list ap)
 		len = ft_print_hexa((long)va_arg(ap, unsigned int), 'X');
 	else if (type == '%')
 		len = ft_print_char(type);
-	else
-		return (-1);
 	return (len);
 }
