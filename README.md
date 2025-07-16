@@ -3,7 +3,7 @@
 A partial reimplementation of the printf in C. Handles the following conversions.
 
 | Conversion | Short Description                                                                             |
-|------------|-----------------------------------------------------------------------------------------------|
+|:------------|:-----------------------------------------------------------------------------------------------|
 | %c         | Print a single character.                                                                     |
 | %s         | Print a string of characters.                                                                 |
 | %p         | The void * pointer argument is printed in hexadecimal.                                        |
